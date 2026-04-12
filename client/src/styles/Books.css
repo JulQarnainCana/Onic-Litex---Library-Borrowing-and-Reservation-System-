@@ -1,0 +1,129 @@
+/* --- src/styles/Books.css --- */
+
+.saved-books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.saved-book-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+  gap: 1.5rem;
+  border: 1px solid transparent;
+}
+
+.saved-book-card:hover {
+  transform: translateX(8px); /* Aabante pakanan kapag naka-hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: #e9f0ee;
+}
+
+.saved-book-cover {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.saved-book-details {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.saved-book-title {
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 0.3rem 0;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.saved-book-author {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.saved-book-date {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.saved-book-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn-read {
+  background-color: #245041;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-read:hover {
+  background-color: #1a3d31;
+}
+
+.btn-remove {
+  background-color: transparent;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-remove:hover {
+  background-color: #d9534f;
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 2px dashed #e2e8f0;
+  color: #64748b;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.empty-state h3 {
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .saved-book-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .saved-book-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}

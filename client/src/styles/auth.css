@@ -1,0 +1,211 @@
+/* src/styles/auth.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- Full Screen Background --- */
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  padding: 2rem;
+}
+
+.auth-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 32, 41, 0.45);
+  pointer-events: none;
+}
+
+/* --- The Main Card --- */
+.auth-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 600px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 24px; /* Rounded corners para sa card effect */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Anino para lumutang */
+  overflow: hidden; /* Para hindi lumampas ang image sa rounded corners */
+}
+
+/* --- Left Side (Blurred Image Area) --- */
+.auth-left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center;     /* Center horizontally */
+  text-align: center;      /* Center text */
+  padding: 3rem;
+  color: white;
+  overflow: hidden;
+}
+
+/* Pseudo-element para sa blurred background para hindi ma-blur ang text */
+.auth-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  filter: blur(4px) brightness(0.45); /* Blur and darken effect */
+  transform: scale(1.05); /* Prevent blurred white edges */
+  z-index: 1;
+}
+
+.left-content {
+  position: relative;
+  z-index: 2; /* Siguraduhing nasa ibabaw ng blurred background ang text */
+}
+
+.left-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.left-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  opacity: 0.95;
+  max-width: 350px;
+}
+
+/* --- Right Side (Form Area) --- */
+.auth-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: #3E6B61;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 380px;
+}
+
+.auth-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.form-wrapper h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #000000;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Form Elements --- */
+.form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #245041;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(36, 80, 65, 0.1);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #245041;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.auth-button:hover {
+  background-color: #0c0c0c;
+  opacity: 0.85;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.auth-footer a {
+  color: #F4F7F6;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive para sa Mobile --- */
+@media (max-width: 768px) {
+  .auth-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .auth-left {
+    padding: 3rem 2rem;
+  }
+  .left-content h1 {
+    font-size: 2.2rem;
+  }
+}

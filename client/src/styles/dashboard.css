@@ -1,0 +1,163 @@
+/* --- src/styles/dashboard.css --- */
+
+/* --- Keyframe Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* --- Layout --- */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  padding: 3rem 4rem;
+}
+
+.main-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.main-content > p {
+  color: #666;
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.dashboard-layout.theme-dark {
+  background-color: #0f1419;
+}
+
+.dashboard-layout.theme-dark .main-content h1 {
+  color: #e8eaed;
+}
+
+.dashboard-layout.theme-dark .main-content > p {
+  color: #9aa0a6;
+}
+
+.dashboard-layout.theme-dark .search-input {
+  background: #1a2332;
+  border-color: #334155;
+  color: #e8eaed;
+}
+
+.dashboard-layout.theme-dark .filter-btn {
+  background: #1a2332;
+  color: #e8eaed;
+  border-color: #334155;
+}
+
+.dashboard-layout.theme-dark .filter-btn.active {
+  background: #245041;
+  border-color: #245041;
+}
+
+.dashboard-layout.theme-dark .book-card {
+  background: #1a2332;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.dashboard-layout.theme-dark .book-title {
+  color: #e8eaed;
+}
+
+.dashboard-layout.theme-dark .book-author,
+.dashboard-layout.theme-dark .no-results {
+  color: #9aa0a6;
+}
+
+.dashboard-layout.theme-dark .saved-book-card {
+  background: #1a2332;
+  border-color: #334155;
+}
+
+.dashboard-layout.theme-dark .saved-book-title {
+  color: #e8eaed;
+}
+
+.dashboard-layout.theme-dark .saved-book-author,
+.dashboard-layout.theme-dark .saved-book-date {
+  color: #9aa0a6;
+}
+
+.dashboard-layout.theme-dark .page-card,
+.dashboard-layout.theme-dark .data-table-wrap,
+.dashboard-layout.theme-dark .stat-card {
+  background: #1a2332;
+  border-color: #334155;
+  color: #e8eaed;
+}
+
+.dashboard-layout.theme-dark .page-card h2,
+.dashboard-layout.theme-dark .profile-panel h3,
+.dashboard-layout.theme-dark .settings-card h3 {
+  color: #e8eaed;
+}
+
+.dashboard-layout.theme-dark .data-table th {
+  background: #15202b;
+  color: #cbd5e1;
+}
+
+.dashboard-layout.theme-dark .data-table td {
+  border-color: #334155;
+  color: #e2e8f0;
+}
+
+.dashboard-layout.theme-dark .profile-panel,
+.dashboard-layout.theme-dark .settings-card {
+  background: #1a2332;
+  border-color: #334155;
+}
+
+.dashboard-layout.theme-dark .form-stack label {
+  color: #cbd5e1;
+}
+
+.dashboard-layout.theme-dark .form-stack input,
+.dashboard-layout.theme-dark input,
+.dashboard-layout.theme-dark select {
+  background: #15202b;
+  border-color: #334155;
+  color: #e8eaed;
+}
+
+.dashboard-layout.theme-dark .stat-card .value {
+  color: #86efac;
+}
+
+.dashboard-layout.theme-dark .stat-card .label {
+  color: #94a3b8;
+}

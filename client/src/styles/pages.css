@@ -1,0 +1,397 @@
+.page-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.page-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: #1a1a1a;
+}
+
+.page-card p.desc {
+  margin: 0 0 1rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.data-table-wrap {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #334155;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-warn {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badge-muted {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn-sm {
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-sm.primary {
+  background: #245041;
+  color: #fff;
+}
+
+.btn-sm.secondary {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.btn-sm.danger {
+  background: #fecaca;
+  color: #991b1b;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.stat-card .value {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #245041;
+}
+
+.stat-card .label {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-top: 0.35rem;
+  line-height: 1.35;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-aside {
+  text-align: center;
+}
+
+.avatar-lg {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #245041, #2d6a4f);
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.profile-aside .role-tag {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.profile-panel {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.profile-panel h3 {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+}
+
+.form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-stack label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.form-stack input {
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-family: inherit;
+}
+
+.btn-primary {
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  background: #245041;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  align-self: flex-start;
+}
+
+.btn-primary:hover {
+  background: #1a3d31;
+}
+
+.btn-ghost {
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.settings-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.settings-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.theme-toggle input[type="checkbox"] {
+  width: 2.5rem;
+  height: 1.35rem;
+  accent-color: #245041;
+  cursor: pointer;
+}
+
+.account-screen--admin .profile-panel,
+.account-screen--admin .settings-card {
+  border-left: 3px solid #3b82f6;
+}
+
+.account-screen--member .profile-panel,
+.account-screen--member .settings-card {
+  border-left: 3px solid #245041;
+}
+
+.manage-books-toolbar {
+  margin-bottom: 1.25rem;
+}
+
+.modal-content--form {
+  max-width: 480px;
+}
+
+.modal-content--narrow {
+  max-width: 420px;
+}
+
+.modal-form-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-form-stack label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.modal-form-stack input[type="text"]:read-only,
+.modal-form-stack input[readonly] {
+  background: #f1f5f9;
+  color: #475569;
+  cursor: not-allowed;
+}
+
+.modal-form-stack input:not([readonly]) {
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-family: inherit;
+}
+
+.field-hint {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.add-book-preview {
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 160px;
+  border: 1px solid #e2e8f0;
+}
+
+.add-book-preview img {
+  width: 100%;
+  height: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.add-book-preview--sm {
+  max-height: 120px;
+  max-width: 100px;
+}
+
+.add-book-preview--sm img {
+  max-height: 120px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.btn-modal-secondary {
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: inherit;
+  color: #334155;
+}
+
+.btn-modal-secondary:hover {
+  background: #f8fafc;
+}
+
+.confirm-summary {
+  margin: 0 0 0.75rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.confirm-details {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+  color: #334155;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.confirm-details li {
+  margin-bottom: 0.25rem;
+}
+
+.table-book-thumb {
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+.modal-overlay--confirm {
+  z-index: 1100;
+}
