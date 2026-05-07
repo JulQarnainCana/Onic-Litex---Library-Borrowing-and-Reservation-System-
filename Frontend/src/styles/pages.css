@@ -339,7 +339,8 @@
 }
 
 .manage-books-table-wrap {
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .manage-books-title-cell {
