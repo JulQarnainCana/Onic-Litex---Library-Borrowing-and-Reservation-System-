@@ -28,7 +28,7 @@ function Catalog() {
       try {
         setLoading(true);
        
-        const response = await axios.get("http://localhost:5000/api/books", {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/books`, {
           params: {
             genre: selectedCategory,
             search: searchQuery

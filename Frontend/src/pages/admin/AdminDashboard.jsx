@@ -15,7 +15,7 @@ export default function AdminDashboard() {
         setError("");
         const token = sessionStorage.getItem("token") || localStorage.getItem("token");
 
-        const response = await axios.get("http://localhost:5000/api/admin/stats", {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/admin/stats`, {
           headers: token ? { Authorization: `Bearer ${token}` } : {}
         });
         setStats(response.data);

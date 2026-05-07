@@ -16,7 +16,7 @@ export default function ManageUsers() {
     try {
       setLoading(true);
       setError("");
-      const res = await axios.get("http://localhost:5000/api/admin/users", {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/admin/users`, {
         headers: getAuthHeaders(),
       });
       setUsers(res.data);
@@ -35,7 +35,7 @@ export default function ManageUsers() {
   const handleStatusUpdate = async (id, newStatus) => {
     try {
       await axios.patch(
-        `http://localhost:5000/api/admin/users/${id}/status`,
+        `${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/admin/users/${id}/status`,
         { status: newStatus },
         { headers: getAuthHeaders() }
       );
